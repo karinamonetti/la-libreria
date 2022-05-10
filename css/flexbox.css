@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.colores {
+    color: #07020D;
+    color: #FFFFFF;
+    color: #F1E9DB;
+    color: #5DB7DE;
+    color: #A39B8B;
+    color: #716A5C;
+}
+
+/* Estilos globales */
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    color: #F1E9DB;
+    background-color: #07020D;
+    margin: 0;
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 400;
+    color: #5DB7DE;
+    text-align: center;
+}
+
+/*------------ Flexbox ------------*/
+.contenedor {
+    border: 2px solid #5DB7DE;
+    padding: 16px;
+    margin: 16px;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 16px 32px;
+}
+
+.item {
+    padding: 16px;
+    background-color: #5DB7DE;
+
+    font-size: 16px;
+    font-weight: 400;
+    color: #07020D;
+    text-align: center;
+}
+
+.item-1 {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 350px;
+}
+
+.item-2 {
+    flex: 1 2 350px; /* 1 1 0 */
+    /* flex-grow: 1;
+    flex-shrink: 2;
+    flex-basis: 350px; */
+}
+
+.item-3 {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 350px;
+}
+
+h1 {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 350px;
+}
+
+ul {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+
+    background-color: #716A5C;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+
+/* El link en reposo */ /* Visitado */
+a:link,
+a:visited {
+    color: #07020D;
+    font-weight: 600;
+}
+
+/* Hover, qué sucede cuando el usuario pasa por arriba con el mouse */
+/* Active, qué sucede cuando el usuario hace click */
+a:hover,
+a:active {
+    color: #5DB7DE;
+    background-color: #07020D;
+}
+
+a.nav:link,
+a.nav:visited {
+    display: inline-block;
+    background-color: #5DB7DE;
+    padding: 8px 18px;
+    margin: 10px 0;
+    border-radius: 16px;
+}
+
+a.nav:hover,
+a.nav:active {
+    background-color: #07020D;
+}
+
+a.footer:link,
+a.footer:visited {
+    display: inline-block;
+    padding: 8px 18px;
+    margin: 10px 0;
+    border-bottom: 3px solid #5db7de00;
+    font-weight: 400;
+}
+
+a.footer:hover,
+a.footer:active {
+    background-color: #07020d00;
+    border-bottom: 3px solid #5DB7DE;
+}

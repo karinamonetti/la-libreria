@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --color-negro:hsl(267, 73%, 3%);
+    --color-blanco:hsl(0, 0%, 100%);
+    --color-blanco-2:hsl(38, 44%, 90%);
+    --color-acento:hsl(198, 66%, 62%);
+    --color-marron1:hsl(40, 12%, 59%);
+    --color-marron2:hsl(40, 10%, 40%);
+}
+
+/* Estilos globales */
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    color: var(--color-negro);
+    background-color: var(--color-blanco-2);
+    margin: 0;
+    line-height: 1.5;
+}
+
+section {
+    max-width: 1250px;
+    text-align: center;
+    margin: 25px auto;
+}
+
+h1 {
+    font-size: 36px;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 24px;
+    line-height: 1.5;
+    font-weight: 400;
+
+    margin: 0;
+    padding: 0;
+}
+
+h3 {
+    font-size: 28px;
+    line-height: 1.5;
+    font-weight: 600;
+
+    margin: 0;
+    padding: 0;
+}
+
+/* cada vez que necesite Flex, aplico: */
+.flex {
+    display: flex;
+    gap: 16px;
+}
+
+/* Esta clase excluye de la vista ciertos elementos que sólo quiero que sean visibles para lectores de pantalla */
+.sr-only {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
+
+/*--------------------------------------------------------*/
+
+/* Encabezado, barra de navegación */
+header {
+    background-color:var(--color-negro);
+    text-align: center;
+    padding: 35px 0 20px;
+}
+
+.contenedor_header {
+    justify-content: center; /* justificación de los elementos al centro */
+    align-items: center; /* alineación al centro de los elementos verticales */
+    flex-wrap: wrap;
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 32px 0;
+}
+
+.contenedor_header > nav {
+    margin: 0 auto; /* Permite "empujar" los elementos de alrededor para que alcancen los bordes del contenedor */
+}
+
+header ul,
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header li,
+footer li {
+    display: inline-block;
+    margin: 16px;
+}
+
+/*--------------------------------------------------------*/
+
+/* Sección de Bienvenida y Novedades */
+#bienvenida {
+    justify-content: center;
+    align-items: center;
+    height: 450px;
+
+    background-image: url('../img/bienvenida_sm.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bienvenidaTitulo {
+    background-color: #07020d98;
+    color: var(--color-blanco-2);
+    padding: 20px;
+    width: 1250px;
+}
+
+/* Home, Novedades */
+.contenedor_novedades {
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+article {
+    width: 250px;
+}
+
+/*--------------------------------------------------------*/
+
+/* Libros individuales / Detalle de los productos */
+
+#detalleLibro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 16px;
+}
+
+#detalleLibro h1 {
+    padding: 0;
+    margin: 0;
+}
+
+#detalleLibro > img {
+    flex: 0.5 1 250px;
+    max-width: 350px;
+}
+
+#detalleLibro > div {
+    flex: 4 3 250px;
+    max-width: 600px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.precio {
+    border: 2px solid var(--color-acento);
+    padding: 10px;
+
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+/*--------------------------------------------------------*/
+
+/* Footer, Pié de página */
+footer {
+    background-color: var(--color-marron1);
+    color: var(--color-blanco-2);
+    font-weight: 600;
+    line-height: 1.8;
+    text-align: center;
+
+    padding-top: 75px;
+    height: 250px;
+}
+
+
+
+/*-------------- Formularios --------------*/
+
+/* Formulario de búsqueda */
+.buscar > input {
+    margin-top: 10px;
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: 3px solid var(--color-marron2);
+}
+
+.buscar > button {
+    margin-top: 10px;
+    padding: 12px 15px;
+    border-radius: 10px;
+    background-color: var(--color-acento);
+    border: 3px solid var(--color-marron2);
+}
+
+.buscar > input:focus,
+.buscar > button:focus {
+    outline: none;
+    border: 3px solid var(--color-acento);
+}
+
+/* Login, Contacto, Registro */
+.formulario label {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.formulario input,
+.formulario textarea,
+.formulario select {
+    display: block; /* agrega los saltos de línea*/
+    width: 450px; /* ancho */
+    margin: 15px auto; /* centra el elemento */
+
+    padding: 10px; /* área del texto */
+
+    border-radius: 0px;  /* ajuste del radio de las esquinas */
+    border: none;
+    border-bottom: 2px solid var(--color-marron2);
+
+    outline: none;
+}
+
+.formulario input:focus,
+.formulario textarea:focus,
+.formulario select:focus {
+    border-bottom: 2px solid var(--color-acento);
+}
+
+.formulario textarea {
+    height: 200px;
+}
+
+.formulario .opciones {
+    display: inline-block; /* línea bloque, no tiene saltos de línea y el ancho del elemento es fijado por su contenido. */
+    width: auto;
+    margin: 5px;
+}
+
+.formulario .submit {
+    background-color: var(--color-acento);
+    font-weight: 700;
+    border: none;
+}
+
+/*-------- Tabla de contenidos de la sección Catálogo --------*/
+table {
+    width: 750px;
+    margin: 0 auto;
+    border: #07020D 1px solid;
+    border-collapse: collapse;
+}
+
+table img {
+    width: 100px;
+}
+
+th, td {
+    padding: 10px;
+}
+
+th {
+    background-color: var(--color-marron2);
+    color: var(--color-blanco-2);
+}
+
+td {
+    background-color: var(--color-blanco-2);
+}
+
+tr:nth-child(odd) td {
+    background-color: var(--color-marron1);
+}
+
+tr:hover td {
+    background-color: var(--color-acento);
+    font-weight: 600;
+}

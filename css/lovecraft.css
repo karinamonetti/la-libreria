@@ -1,0 +1,117 @@
+@font-face {
+    font-family: ArnoPro;
+    src: url(../fonts/Arno/ArnoPro-Regular.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: ArnoPro;
+    src: url(../fonts/Arno/ArnoPro-Bold.otf);
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: ArnoPro;
+    src: url(../fonts/Arno/ArnoPro-BoldItalic.otf);
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: ArnoPro;
+    src: url(../fonts/Arno/ArnoPro-Italic.otf);
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: ArnoPro;
+    src: url(../fonts/Arno/ArnoPro-LightDisplay.otf);
+    font-weight: lighter;
+    font-style: normal;
+}
+
+:root {
+    --negro: hsl(267, 73%, 3%);
+    --blanco: hsl(0, 0%, 100%);
+    --fondo: hsl(38, 44%, 90%);
+    --overlay: hsl(198, 66%, 62%);
+    --marron1: hsl(40, 12%, 59%);
+    --marron2: hsl(40, 10%, 40%);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--fondo);
+}
+
+img {
+    max-width: 100%;
+}
+
+section {
+    max-width: 100%;
+    min-height: 100vh;
+}
+
+#bienvenida {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url(../img/fondo_landing_2.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#bienvenida img {
+    width: min(80%, 900px);
+}
+
+#libro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+
+    text-align: right;
+    font-family: ArnoPro;
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Texto adaptable */
+#libro h1 {
+    /* font-size: 5vmin; vmin es viewport mínimo, vmax viewport máximo */
+    font-size: clamp(1.8em, 5vw, 2.5em);
+    font-weight: normal;
+    font-style: normal;
+    margin: 0;
+}
+
+#libro h2 {
+    font-family: ArnoPro;
+    font-weight: lighter;
+    font-size: clamp(1.5em, 3vw, 2em);
+    margin: 0;
+}
+
+#libro p {
+    font-family: ArnoPro;
+    font-weight: lighter;
+    font-size: clamp(1.2em, 2vw, 1.5em);
+    margin: 0;
+}
+
+#libro article {
+    width: min(45%, 500px)
+}
+
+#libro img {
+    width: min(45%, 330px)
+}
